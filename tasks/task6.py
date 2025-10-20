@@ -1,10 +1,11 @@
-# tasks/task6.py
+import sys
 
 def solve():
-# Ниже пишите решение задачи
+    if hasattr(sys.stdin, "isatty") and sys.stdin.isatty():
+        a, b, c = sorted(map(int, input("Введите три стороны: ").split()))
+    else:
+        a, b, c = sorted(map(int, input().split()))
+    print(c * c == a * a + b * b)
 
-   
-   
-# Код ниже не трогать! он нужен для тестов
 if __name__ == "__main__":
     solve()
