@@ -1,9 +1,13 @@
-# tasks/task3.py
+import sys
 
 def solve():
-# Ниже пишите решение задачи
-     
+    if hasattr(sys.stdin, "isatty") and sys.stdin.isatty():
+        w1 = input("Введите первое слово: ").strip()
+        w2 = input("Введите второе слово: ").strip()
+    else:
+        w1 = input().strip()
+        w2 = input().strip()
+    print(w1 == "awesome" or w2 == "awesome")
 
-# Код ниже не трогать! он нужен для тестов
 if __name__ == "__main__":
     solve()
